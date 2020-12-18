@@ -22,6 +22,24 @@ angular.module('myapp',[])
             id:$scope.id,name:$scope.name,age:$scope.age,gender:$scope.gender,course:$scope.course,address:$scope.address
         });
     }
+    function getindex(id)
+    {
+        for(var i=0;i<$scope.listStudent.length;i++)
+        if($scope.listStudent[i].id==id)
+        return i;
+        return -1;
+    }
+    $scope.edit=function(id)
+    {
+        var index=this.$index;
+        var student=$scope.listStudent[index];
+        $scope.id=student.id;
+        $scope.name=student.name;
+        $scope.age=student.age;
+        $scope.gender=student.gender;
+        $scope.course=student.course;
+        $scope.address=student.address;
+    }
     $scope.delete=function()
     {
         var result=confirm('Are you sure?');
