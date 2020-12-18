@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Details</title>
+    <script src="angular.min.js"></script>
+    <script src="filter_app.js"></script>
+    <link href="filter.css" rel="stylesheet">
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+   <h3>Student Details</h3>
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>Index</th>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Course</th>
+            <th>Address</th>
+            <th>OPTIONS</th>
+        </tr>
+        <tr ng-repeat="student in listStudent">
+            <td>{{$index}}</td>
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.course}}</td>
+            <td>{{student.address}}</td>
+            <td>
+                <a href="#" ng-click="delete()">Delete</a> |
+                <a href="#" ng-click="edit(product.id)">Edit</a>
+            </td>
+        </tr>
+    </table>
+    <h3>Update Student Details</h3>
+   
+    <table cellpadding="2" cellspacing="2">
+        <tr>
+            <td>STUDENT ID</td>
+            <td><input type="text" ng-model="id"></td>
+        </tr>
+        <tr>
+            <td>NAME</td>
+            <td><input type="text" ng-model="name"></td>
+        </tr>
+        <tr>
+            <td>AGE</td>
+            <td><input type="tel" ng-model="age"></td>
+        </tr>
+        <tr>
+            <td>GENDER</td>
+            <td><input type="text" ng-model="gender"></td>
+        </tr>
+        <tr>
+            <td>COURSE</td>
+            <td><input type="text" ng-model="course"></td>
+        </tr>
+        <tr>
+            <td>ADDRESS</td>
+            <td><input type="text" ng-model="address"></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="button" value="ADD" ng-click="add()">
+            <input type="button" value="SAVE" ng-click="save()"></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
