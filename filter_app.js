@@ -2,10 +2,10 @@ angular.module('myapp',[])
 .controller('myctrl',function($scope)
 {
     $scope.listStudent=[
-        {id:'S01', name:'Sharika', age:21, gender:F, course:MAIS, address: Kerala},
-         {id:'S02', name:'Dominic', age:23, gender:M, course:MPHY, address: Bangalore},
-          {id:'S03', name:'Shyam', age:21, gender:M, course:MCA, address: Punjab},
-           {id:'S04', name:'Sam', age:22, gender:M, course:MCA, address: Bangalore}
+        {id:'S01', name:'Sharika', age:21, gender:'F', course:'MAIS', address: 'Kerala'},
+         {id:'S02', name:'Dominic', age:23, gender:'M', course:'MPHY', address: 'Bangalore'},
+          {id:'S03', name:'Shyam', age:21, gender:'M', course:'MCA', address: 'Punjab'},
+           {id:'S04', name:'Sam', age:22, gender:'M', course:'MCA', address: 'Bangalore'}
     ];
     $scope.save=function()
     {
