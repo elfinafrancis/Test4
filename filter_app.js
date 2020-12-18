@@ -7,6 +7,7 @@ angular.module('myapp',[])
           {id:'S03', name:'Shyam', age:21, gender:'M', course:'MCA', address: 'Punjab'},
            {id:'S04', name:'Sam', age:22, gender:'M', course:'MCA', address: 'Bangalore'}
     ];
+
     $scope.save=function()
     {
         var index=getindex($scope.id);
@@ -22,6 +23,7 @@ angular.module('myapp',[])
             id:$scope.id,name:$scope.name,age:$scope.age,gender:$scope.gender,course:$scope.course,address:$scope.address
         });
     }
+
     function getindex(id)
     {
         for(var i=0;i<$scope.listStudent.length;i++)
@@ -29,6 +31,7 @@ angular.module('myapp',[])
         return i;
         return -1;
     }
+
     $scope.edit=function(id)
     {
         var index=this.$index;
@@ -40,6 +43,7 @@ angular.module('myapp',[])
         $scope.course=student.course;
         $scope.address=student.address;
     }
+    
     $scope.delete=function()
     {
         var result=confirm('Are you sure?');
