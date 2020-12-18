@@ -48,9 +48,11 @@ include "connection.php"
   </form>
   </div>
 </div>
-    <div class="col-lg-12">
+<div>
+Search:<input type="text" placeholder="Seach student details" ng-model="Search" />
+</div>
+<div class="col-lg-12">
       <table class="table table-bordered">
-
   <thead>
       <tr>
         <th>Student ID</th>
@@ -67,7 +69,6 @@ include "connection.php"
       while($row=mysqli_fetch_array($res))
       {
         echo "<tr>";
-      
         echo "<td>"; echo $row["sid"];echo "</td>";
         echo "<td>"; echo $row["name"];echo "</td>";
         echo "<td>"; echo $row["age"];echo "</td>";
@@ -82,7 +83,6 @@ include "connection.php"
   </table>
 
 </div>
-
 </body>
 <?php
 if(isset($_POST["insert"]))
